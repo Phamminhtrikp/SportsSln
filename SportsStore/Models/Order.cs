@@ -6,6 +6,7 @@ namespace SportsStore.Models
 {
 	public class Order
 	{
+
 		[BindNever]
 		public int OrderID { get; set; }
 

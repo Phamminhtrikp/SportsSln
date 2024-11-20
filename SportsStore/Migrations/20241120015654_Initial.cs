@@ -24,7 +24,7 @@ namespace SportsStore.Migrations
                     State = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Zip = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Country = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    GiftWrap = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    GiftWrap = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {

@@ -12,7 +12,7 @@ using SportsStore.Models;
 namespace SportsStore.Migrations
 {
     [DbContext(typeof(StoreDbContext))]
-    [Migration("20241119161358_Initial")]
+    [Migration("20241120015654_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -67,8 +67,8 @@ namespace SportsStore.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("GiftWrap")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<bool>("GiftWrap")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Line1")
                         .IsRequired()
