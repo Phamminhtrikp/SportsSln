@@ -14,6 +14,7 @@ namespace SportsStore.Models
 		public string Description { get; set; } = string.Empty ;
 
 		[Required]
+		[Range(0.01, double.MaxValue, ErrorMessage = "Please enter a position price")]
 		[Column(TypeName = "decimal(8, 2)")]
 		public decimal Price { get; set; }
 

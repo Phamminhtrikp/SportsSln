@@ -1,4 +1,5 @@
-﻿@page "/admin/products/details/{id:long}"
+﻿
+@page "/admin/products/details/{id:long}"
 
 <h3 class="bg-info text-white text-center p-1">Details</h3>
 
@@ -25,8 +26,7 @@
 	public Product? Product { get; set; }
 	protected override void OnParametersSet()
 	{
-		Product = Repository?.Products.FirstOrDefault(p =>
-		p.ProductID == Id);
+		Product = Repository?.Products.FirstOrDefault(p => p.ProductID == Id);
 	}
 	public string EditUrl => $"/admin/products/edit/{Product?.ProductID}";
 }
